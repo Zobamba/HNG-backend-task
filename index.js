@@ -6,9 +6,6 @@ dotenv.config();
 
 const app = express();
 
-// app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
-// app.use(bodyParser.json({ limit: '50mb' }));
-
 app.use(express.json());
 
 const port = 5000;
@@ -19,7 +16,6 @@ app.get('/', (req, res) => {
 });
 
 // Endpoint route
-
 app.get('/api', (req, res) => {
   const { slack_name, track } = req.query;
 
