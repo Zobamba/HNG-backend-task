@@ -26,11 +26,11 @@ app.get('/api', (req, res) => {
   res.status(200).send({
     slack_name: slack_name,
     current_day: currentDay,
-    utc_time: date.toISOString(),
+    utc_time: date.toISOString().slice(0,-5)+"Z",
     track: track,
     github_file_url: "https://github.com/Zobamba/HNG-backend-task/blob/main/index.js",
     github_repo_url: "https://github.com/Zobamba/HNG-backend-task",
-    status_code: 200,
+    status_code: 200
   });
 });
 
